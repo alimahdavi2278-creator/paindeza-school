@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>دبستان شهید سیروس نجفی پایین دزا</title>
+<style>
+:root{--g:#0f6b35;--g2:#0a3d1d;--gold:#ffd700;--dark:#08110c;}
+*{box-sizing:border-box} body{margin:0;font-family:Tahoma,sans-serif;background:var(--dark);color:#fff}
+header{position:sticky;top:0;background:rgba(8,17,12,.95);border-bottom:2px solid var(--gold);z-index:10}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
+.logo{color:var(--gold);font-weight:bold}
+.menu{display:flex;gap:18px}
+.menu a{color:#fff;text-decoration:none}
+.ham{display:none;font-size:28px;color:var(--gold);cursor:pointer}
+.hero{height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),linear-gradient(135deg,var(--g),var(--dark));}
+.hero h1{font-size:clamp(32px,6vw,70px);color:var(--gold);text-shadow:0 0 20px var(--gold)}
+.container{width:min(1200px,92%);margin:auto}
+.section{padding:60px 0}
+.card{background:#102117;border:1px solid #1d8b48;border-radius:18px;padding:20px;
+box-shadow:0 0 18px rgba(255,215,0,.12)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.gallery img,.slider img{width:100%;border-radius:14px}
+.slider{overflow:hidden}
+.slide{padding:10px;background:#102117;border-radius:18px}
+h2,h3{color:var(--gold)}
+footer{text-align:center;padding:25px;background:#050d08}
+@media(max-width:768px){
+.menu{display:none;flex-direction:column;padding:15px}
+.menu.show{display:flex}
+.ham{display:block}
+}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<div class="logo">دبستان شهید سیروس نجفی پایین دزا</div>
+<div class="ham" onclick="document.querySelector('.menu').classList.toggle('show')">☰</div>
+<div class="menu">
+<a href="#home">خانه</a>
+<a href="#staff">کارکنان</a>
+<a href="#gallery">گالری</a>
+<a href="#news">اخبار</a>
+<a href="#contact">تماس</a>
+</div>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div>
+<h1>دبستان شهید سیروس نجفی پایین دزا</h1>
+<p>آموزش، پژوهش و پرورش آینده سازان ایران</p>
+</div>
+</section>
+
+<div class="container">
+
+<section class="section">
+<h2>اسلایدر صفحه اصلی</h2>
+<div class="slider">
+<div class="slide">
+<p>محل قرارگیری تصویر ساختمان مدرسه و لوگوی رسمی</p>
+</div>
+</div>
+</section>
+
+<section id="staff" class="section">
+<h2>مدیریت و کارکنان</h2>
+<div class="grid">
+<div class="card"><h3>مدیر</h3><p>قاسم کرد فیروزجایی</p></div>
+<div class="card"><h3>معاون آموزشی</h3><p>ابراهیم یزدانی</p></div>
+<div class="card"><h3>معاون پرورشی</h3><p>حسین رضاقلی پور</p></div>
+<div class="card"><h3>معاون اجرایی</h3><p>علیرضا سالخورده سنگتراشانی</p></div>
+</div>
+</section>
+
+<section id="gallery" class="section">
+<h2>گالری تصاویر</h2>
+<div class="grid gallery">
+<div class="card">تصویر ساختمان مدرسه</div>
+<div class="card">لوگوی مدرسه</div>
+<div class="card">فعالیت‌های آموزشی</div>
+</div>
+</section>
+
+<section id="news" class="section">
+<h2>اخبار و اطلاعیه‌ها</h2>
+<div class="grid">
+<div class="card">اطلاعیه شماره ۱</div>
+<div class="card">اطلاعیه شماره ۲</div>
+<div class="card">اطلاعیه شماره ۳</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="card">
+<h2>تماس با ما</h2>
+<p>آدرس: ساری، بلوار کشاورز، روستای پائین دزا</p>
+<p>تلفن: 011 33233505</p>
+</div>
+</section>
+
+</div>
+<footer>© دبستان شهید سیروس نجفی پایین دزا</footer>
+</body>
+</html>
