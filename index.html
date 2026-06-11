@@ -1,110 +1,326 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="وب‌سایت رسمی دبستان شهید سیروس نجفی پایین دزا، ساری، روستای پائین دزا">
-<meta name="keywords" content="دبستان شهید سیروس نجفی پایین دزا, مدرسه پایین دزا, دبستان ساری, مدرسه ساری">
-<title>دبستان شهید سیروس نجفی پایین دزا</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>دبستان شهید سیروس نجفی پایین دزا | ساری</title>
+
+<meta name="description" content="وب سایت رسمی دبستان شهید سیروس نجفی پایین دزا">
+<meta name="keywords" content="دبستان شهید سیروس نجفی پایین دزا, مدرسه ساری, پایین دزا">
+
 <style>
-:root{--g:#0f6b35;--g2:#0a3d1d;--gold:#ffd700;--dark:#08110c;}
-*{box-sizing:border-box} body{margin:0;font-family:Tahoma,sans-serif;background:var(--dark);color:#fff}
-header{position:sticky;top:0;background:rgba(8,17,12,.95);border-bottom:2px solid var(--gold);z-index:10}
-.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px}
-.logo{color:var(--gold);font-weight:bold}
-.menu{display:flex;gap:18px}
-.menu a{color:#fff;text-decoration:none}
-.ham{display:none;font-size:28px;color:var(--gold);cursor:pointer}
-.hero{height:85vh;display:flex;align-items:center;justify-content:center;text-align:center;
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),linear-gradient(135deg,var(--g),var(--dark));}
-.hero h1{font-size:clamp(32px,6vw,70px);color:var(--gold);text-shadow:0 0 20px var(--gold)}
-.container{width:min(1200px,92%);margin:auto}
-.section{padding:60px 0}
-.card{background:#102117;border:1px solid #1d8b48;border-radius:18px;padding:20px;
-box-shadow:0 0 18px rgba(255,215,0,.12)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
-.gallery img,.slider img{width:100%;border-radius:14px}
-.slider{overflow:hidden}
-.slide{padding:10px;background:#102117;border-radius:18px}
-h2,h3{color:var(--gold)}
-footer{text-align:center;padding:25px;background:#050d08}
-@media(max-width:768px){
-.menu{display:none;flex-direction:column;padding:15px}
-.menu.show{display:flex}
-.ham{display:block}
+
+:root{
+--green:#0f6b35;
+--gold:#ffd700;
+--dark:#08110c;
 }
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma,sans-serif;
+}
+
+body{
+background:var(--dark);
+color:white;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(8,17,12,.95);
+border-bottom:2px solid var(--gold);
+z-index:999;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 5%;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+color:var(--gold);
+font-weight:bold;
+}
+
+.logo img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+nav ul a{
+text-decoration:none;
+color:white;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url("school.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+color:var(--gold);
+}
+
+.section{
+padding:90px 8%;
+}
+
+.section-title{
+text-align:center;
+color:var(--gold);
+margin-bottom:40px;
+font-size:40px;
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.stat{
+background:#102117;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+.stat h2{
+color:var(--gold);
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#102117;
+padding:25px;
+border-radius:20px;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+border-radius:20px;
+}
+
+.contact{
+background:#102117;
+padding:30px;
+border-radius:20px;
+text-align:center;
+}
+
+footer{
+background:#050d08;
+text-align:center;
+padding:25px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:34px;
+}
+
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+
 </style>
 </head>
+
 <body>
+
 <header>
-<div class="nav">
-<div class="logo">دبستان شهید سیروس نجفی پایین دزا</div>
-<div class="ham" onclick="document.querySelector('.menu').classList.toggle('show')">☰</div>
-<div class="menu">
-<a href="#home">خانه</a>
-<a href="#staff">کارکنان</a>
-<a href="#gallery">گالری</a>
-<a href="#news">اخبار</a>
-<a href="#contact">تماس</a>
+
+<nav>
+
+<div class="logo">
+<img src="logo.png" alt="لوگوی مدرسه">
+<span>دبستان شهید سیروس نجفی پایین دزا</span>
 </div>
-</div>
+
+<ul>
+<li><a href="#about">معرفی</a></li>
+<li><a href="#staff">کارکنان</a></li>
+<li><a href="#gallery">گالری</a></li>
+<li><a href="#contact">تماس</a></li>
+</ul>
+
+</nav>
+
 </header>
 
-<section class="hero" id="home">
-<div>
-<h1>دبستان شهید سیروس نجفی پایین دزا</h1>
-<p>آموزش، پژوهش و پرورش آینده سازان ایران</p>
-</div>
-</section>
+<section class="hero">
 
-<div class="container">
+<div>
+
+<h1>دبستان شهید سیروس نجفی پایین دزا</h1>
+
+<p>
+آموزش، پژوهش و پرورش آینده‌سازان ایران
+</p>
+
+</div>
+
+</section>
 
 <section class="section">
-<h2>اسلایدر صفحه اصلی</h2>
-<div class="slider">
-<div class="slide">
-<p>محل قرارگیری تصویر ساختمان مدرسه و لوگوی رسمی</p>
+
+<h2 class="section-title">آمار مدرسه</h2>
+
+<div class="stats">
+
+<div class="stat">
+<h2>1382</h2>
+<p>سال تأسیس</p>
 </div>
+
+<div class="stat">
+<h2>350+</h2>
+<p>دانش‌آموز</p>
 </div>
+
+<div class="stat">
+<h2>12</h2>
+<p>کلاس</p>
+</div>
+
+<div class="stat">
+<h2>18</h2>
+<p>کارکنان</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="staff" class="section">
-<h2>مدیریت و کارکنان</h2>
-<div class="grid">
-<div class="card"><h3>مدیر</h3><p>قاسم کرد فیروزجایی</p></div>
-<div class="card"><h3>معاون آموزشی</h3><p>ابراهیم یزدانی</p></div>
-<div class="card"><h3>معاون پرورشی</h3><p>حسین رضاقلی پور</p></div>
-<div class="card"><h3>معاون اجرایی</h3><p>علیرضا سالخورده سنگتراشانی</p></div>
-</div>
-</section>
+<section class="section" id="about">
 
-<section id="gallery" class="section">
-<h2>گالری تصاویر</h2>
-<div class="grid gallery">
-<div class="card">تصویر ساختمان مدرسه</div>
-<div class="card">لوگوی مدرسه</div>
-<div class="card">فعالیت‌های آموزشی</div>
-</div>
-</section>
+<h2 class="section-title">معرفی مدرسه</h2>
 
-<section id="news" class="section">
-<h2>اخبار و اطلاعیه‌ها</h2>
-<div class="grid">
-<div class="card">اطلاعیه شماره ۱</div>
-<div class="card">اطلاعیه شماره ۲</div>
-<div class="card">اطلاعیه شماره ۳</div>
-</div>
-</section>
-
-<section id="contact" class="section">
 <div class="card">
-<h2>تماس با ما</h2>
-<p>آدرس: ساری، بلوار کشاورز، روستای پائین دزا</p>
-<p>تلفن: 011 33233505</p>
-</div>
-</section>
+
+<p>
+دبستان شهید سیروس نجفی پایین دزا از سال 1382 با هدف ارتقای سطح علمی، فرهنگی و تربیتی دانش‌آموزان فعالیت خود را آغاز نموده است.
+</p>
 
 </div>
-<footer>© دبستان شهید سیروس نجفی پایین دزا</footer>
+
+</section>
+
+<section class="section" id="staff">
+
+<h2 class="section-title">مدیریت مدرسه</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>مدیر</h3>
+<p>قاسم کرد فیروزجایی</p>
+</div>
+
+<div class="card">
+<h3>معاون آموزشی</h3>
+<p>ابراهیم یزدانی</p>
+</div>
+
+<div class="card">
+<h3>معاون پرورشی</h3>
+<p>حسین رضاقلی پور</p>
+</div>
+
+<div class="card">
+<h3>معاون اجرایی</h3>
+<p>علیرضا سالخورده سنگتراشانی</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section" id="gallery">
+
+<h2 class="section-title">گالری تصاویر</h2>
+
+<div class="gallery">
+
+<img src="school.jpg" alt="ساختمان مدرسه">
+
+<img src="logo.png" alt="لوگوی مدرسه">
+
+</div>
+
+</section>
+
+<section class="section" id="contact">
+
+<h2 class="section-title">تماس با ما</h2>
+
+<div class="contact">
+
+<p>📍 ساری، بلوار کشاورز، روستای
+
+پائین دزا</p>
+
+<br>
+
+<p>☎️ 01133233505</p>
+
+</div>
+
+</section>
+
+<footer>
+
+©️ دبستان شهید سیروس نجفی پایین دزا
+
+</footer>
+
 </body>
 </html>
